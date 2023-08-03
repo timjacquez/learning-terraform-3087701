@@ -45,7 +45,7 @@ resource "aws_instance" "blog" {
 
 module "blog-alb" {
   source  = "terraform-aws-modules/alb/aws"
-  version = "~> 8.0"
+  version = "~> 6.0"
 
   name = "blog-alb"
 
@@ -65,10 +65,6 @@ module "blog-alb" {
         my_target = {
           target_id = aws_instance.blog.id
           port = 80
-        }
-        my_other_target = {
-          target_id = "i-a1b2c3d4e5f6g7h8i"
-          port = 8080
         }
       }
     }
