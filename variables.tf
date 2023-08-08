@@ -7,7 +7,7 @@ variable "ami_filter" {
   description = "Name filter and owner for AMI"
 
   type = object ({
-    name = sring
+    name = string
     owner = string
 })
 
